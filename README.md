@@ -10,14 +10,27 @@ Und das beste daran? Die Informationen bleiben sogar über einen Neustart hinweg
 <br>
 
 ### Installation
-1. Stellt sicher, dass ihr das BED_MESH Feature von Klipper nutzt und korrekt eingerichtet habt <br>
-2. Ladet euch `Intelligent_Default_Mesh.zip` herunter <br>
-3. Entpackt `Intelligent_Default_Mesh.zip` <br>
-4. Ladet den Ordner `Intelligent_Default_Mesh` im Webinterface eurer Wahl hoch <br>
-5. Fügt `[include Intelligent_Default_Mesh/_include.cfg]` in eurer printer.cfg hinzu <br>
-6. Aktiviert falls ihr es nicht bereits habe die `[save_variables]` section in Klipper (https://www.klipper3d.org/Config_Reference.html#save_variables) <br>
-7. Ersetzt den `BED_MESH_PROFILE LOAD=...` Aufruf in eurem START_PRINT Makro duch `BED_MESH_PROFILE LOAD=default INTELLIGENT=1` <br>
-8. Optional: Falls ihr am Ende des Drucks das BED_MESH und den GCODE_OFFSET wieder entladen wollt, ruft einfach `BED_MESH_CLEAR INTELLIGENT=1` in eurem END_PRINT Makro auf
+# LynxCrew Klicky Macros
+
+SSH into you pi and run:
+```
+wget -O - https://raw.githubusercontent.com/LynxCrew/Intelligent_Default_Mesh/main/install.sh | bash
+```
+
+then add this to your moonraker.conf:
+```
+[update_manager intelligent_default_mesh]
+type: git_repo
+channel: dev
+path: ~/intelligent_default_mesh
+origin: https://github.com/LynxCrew/Intelligent_Default_Mesh.git
+managed_services: klipper
+primary_branch: main
+install_script: install.sh
+```
+
+then add `[include Klicky/_include.cfg]` and `[include Variables/klicky_variables.cfg]` to your printer.cfg.
+
 
 
 <br>
