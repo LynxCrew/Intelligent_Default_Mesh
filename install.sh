@@ -25,12 +25,12 @@ function preflight_checks {
 
 function check_download {
     local klickydirname klickybasename
-    klickydirname="$(dirname ${REPO_PATH})"
-    klickybasename="$(basename ${REPO_PATH})"
+    repodirname="$(dirname ${REPO_PATH})"
+    repobasename="$(basename ${REPO_PATH})"
 
     if [ ! -d "${REPO_PATH}" ]; then
-        echo "[DOWNLOAD] Downloading Klicky repository..."
-        if git -C $klickydirname clone https://github.com/LynxCrew/Klicky.git $klickybasename; then
+        echo "[DOWNLOAD] Downloading IntelligentDefaultMesh repository..."
+        if git -C $repodirname clone https://github.com/LynxCrew/Intelligent_Default_Mesh.git $repobasename; then
             chmod +x ${REPO_PATH}/install.sh
             chmod +x ${REPO_PATH}/update.sh
             chmod +x ${REPO_PATH}/uninstall.sh
