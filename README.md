@@ -3,6 +3,7 @@
 
 SSH into you pi and run:
 ```
+cd ~
 wget -O - https://raw.githubusercontent.com/LynxCrew/Intelligent_Default_Mesh/main/install.sh | bash
 ```
 
