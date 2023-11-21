@@ -18,3 +18,10 @@ managed_services: klipper
 primary_branch: main
 install_script: install.sh
 ```
+
+you also need to add
+```
+[save_variables]
+filename: ~/database.cfg
+```
+to your printer.cfg
