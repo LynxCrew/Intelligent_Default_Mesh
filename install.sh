@@ -47,6 +47,8 @@ function check_download {
 function link_extension {
     echo "[INSTALL] Linking extension to Klipper..."
 
+
+    mkdir -p "${CONFIG_PATH}/Overrides"
     for OVERRIDE in ${OVERRIDES[@]}; do
         if [ -f "${CONFIG_PATH}/Overrides/override_${OVERRIDE}.cfg" ]; then
             chmod -R 777 "${CONFIG_PATH}/Overrides/override_${OVERRIDE}.cfg"
