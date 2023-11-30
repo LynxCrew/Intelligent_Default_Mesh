@@ -1,7 +1,6 @@
 # Intelligented Default Bed-Mesh
+
 ## Installation
-
-
 SSH into you pi and run:
 ```
 cd ~
