@@ -36,7 +36,7 @@ function check_download {
             chmod +x ${REPO_PATH}/uninstall.sh
             printf "[DOWNLOAD] Download complete!\n\n"
         else
-            echo "[ERROR] Download of Klicky git repository failed!"
+            echo "[ERROR] Download of IntelligentDefaultMesh git repository failed!"
             exit -1
         fi
     else

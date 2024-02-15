@@ -30,7 +30,7 @@ function preflight_checks {
 function uninstall_macros {
     local yn
     while true; do
-        read -p "${cyan}Do you really want to uninstall Klicky? (Y/n):${white} " yn
+        read -p "${cyan}Do you really want to uninstall IntelligentDefaultMesh? (Y/n):${white} " yn
         case "${yn}" in
           Y|y|Yes|yes)
             for OVERRIDE in ${OVERRIDES[@]}; do
