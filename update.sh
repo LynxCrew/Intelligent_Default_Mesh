@@ -23,7 +23,7 @@ function preflight_checks {
 function update_repo {
     cd ${REPO_PATH}
     git fetch origin
-    if [ `git rev-list HEAD...origin/main --count` != 0 ]; then
+    if [ `git rev-list HEAD...origin/master --count` != 0 ]; then
         echo "[UPDATE] Updating IntelligentDefaultMesh repository..."
         if git pull origin; then
             printf "[UPDATE] Download complete!\n\n"
