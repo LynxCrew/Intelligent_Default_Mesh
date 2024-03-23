@@ -25,3 +25,7 @@ you also need to add
 filename: ~/database.cfg
 ```
 to your printer.cfg
+
+## What it does:
+You can persistently save which mesh you are currently using.
+If you call BED_MESH_PROFILE LOAD=default INTELLIGENT=1, instead of the profile called default, the profile you saved will be loaded together with a predefined z-offset.
