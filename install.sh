@@ -24,7 +24,7 @@ function preflight_checks {
 }
 
 function check_download {
-    local klickydirname klickybasename
+    local repodirname repobasename
     repodirname="$(dirname ${REPO_PATH})"
     repobasename="$(basename ${REPO_PATH})"
 
@@ -40,7 +40,7 @@ function check_download {
             exit -1
         fi
     else
-        printf "[DOWNLOAD] Klicky repository already found locally. Continuing...\n\n"
+        printf "[DOWNLOAD] IntelligentDefaultMesh repository already found locally. Continuing...\n\n"
     fi
 }
 
@@ -85,7 +85,7 @@ function restart_klipper {
 
 
 printf "\n======================================\n"
-echo "- Klicky install script -"
+echo "- IntelligentDefaultMesh install script -"
 printf "======================================\n\n"
 
 
