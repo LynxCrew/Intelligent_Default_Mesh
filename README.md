@@ -7,7 +7,7 @@ You can slice your model once and then print it on any build-plate you want with
 SSH into you pi and run:
 ```
 cd ~
-wget -O - https://raw.githubusercontent.com/LynxCrew/Intelligent_Default_Mesh/main/install.sh | bash
+wget -O - https://raw.githubusercontent.com/LynxCrew/Intelligent_Default_Mesh/master/install.sh | bash
 ```
 
 then add this to your moonraker.conf:
