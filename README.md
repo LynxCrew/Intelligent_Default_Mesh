@@ -30,8 +30,8 @@ filename: ~/database.cfg
 to your printer.cfg
 
 ## What it does:
-You can persistently save which mesh you are currently using by calling SET_DEFAULT_MESH DEFAULT_MESH=<name>.
-If you call BED_MESH_PROFILE LOAD=default INTELLIGENT=1 TEMPERATURE_EXTRUDER={EXTRUDER_TEMP} TEMPERATURE_BED={BED_TEMP} FILAMENT_PROFILE='{FILAMENT_PROFILE}', instead of the profile called default, the profile you saved will be loaded together with a predefined z-offset for that profile, temperature and filament.
+You can persistently save which mesh you are currently using by calling `SET_DEFAULT_MESH DEFAULT_MESH=<name>`.
+If you call `BED_MESH_PROFILE LOAD=default INTELLIGENT=1 TEMPERATURE_EXTRUDER={EXTRUDER_TEMP} TEMPERATURE_BED={BED_TEMP} FILAMENT_PROFILE='{FILAMENT_PROFILE}'`, instead of the profile called default, the profile you saved will be loaded together with a predefined z-offset for that profile, temperature and filament.
 
 ## Config Reference:
 ```
