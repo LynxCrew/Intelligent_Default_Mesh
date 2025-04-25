@@ -62,3 +62,14 @@ Filament profile specific offsets, set the name of the filament profile as the k
 [gcode_macro _MAX_BED_TEMPS]
 ```
 Can be used to specify max temps for build plates and check them in start_print for example
+
+## Example usage:
+```
+[gcode_macro START_PRINT]
+gcode:
+  {% set BED_MESH_PROFILE = params.BED_MESH_PROFILE|default('default')|string %}
+  {% set BED_TEMP = params.BED_TEMP|default(60)|float %}
+  {% set EXTRUDER_TEMP = params.EXTRUDER_TEMP|default(215)|float %}
+  {% set FILAMENT_PROFILE = params.FILAMENT_PROFILE|default('None')|string %}
+  BED_MESH_PROFILE LOAD={BED_MESH_PROFILE} INTELLIGENT=1 TEMPERATURE_EXTRUDER={EXTRUDER_TEMP} TEMPERATURE_BED={BED_TEMP} FILAMENT_PROFILE='{FILAMENT_PROFILE}'
+```
