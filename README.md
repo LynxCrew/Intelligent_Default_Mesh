@@ -37,8 +37,8 @@ If you call `BED_MESH_PROFILE LOAD=default INTELLIGENT=1 TEMPERATURE_EXTRUDER={E
 ```
 [gcode_macro _MESH_VARIABLES]
 ```
-Here you set the general offset to be applied for the given mesh name
-`default: -0.1` would apply a z-offset of -0.1 if the mesh 'default' is loaded
+Here you set mesh specific params like general offset, filament based offsets (`filament_<name>`), temp based offsets (`extruder_temp_<temp>` and `bed_temp_<temp>`) and the max bed temp
+If values are not defined here, it will fall back to the global values
 
 ```
 [gcode_macro _TEMPERATURE_OFFSETS_EXTRUDER]
@@ -57,11 +57,6 @@ Same as above, just for the bed
 [gcode_macro _FILAMENT_OFFSETS]
 ```
 Filament profile specific offsets, set the name of the filament profile as the key and the offset will be used when the profile name is passed to the command
-
-```
-[gcode_macro _MAX_BED_TEMPS]
-```
-Can be used to specify max temps for build plates and check them in start_print for example
 
 ## Example usage:
 ```
