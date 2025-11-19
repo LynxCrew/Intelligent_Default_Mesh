@@ -37,7 +37,7 @@ If you call `BED_MESH_PROFILE LOAD=default INTELLIGENT=1 TEMPERATURE_EXTRUDER={E
 ```
 [gcode_macro _MESH_VARIABLES]
 ```
-Here you set mesh specific params like general offset, filament based offsets (`filament_<name>`), temp based offsets (`extruder_temp_<temp>` and `bed_temp_<temp>`) and the max bed temp
+Here you set mesh specific params like general offset, filament based offsets (`filament_<name>`), temp based offsets (`extruder_temps` and `bed_temps`) and the max bed temp
 If values are not defined here, it will fall back to the global values
 
 ```
