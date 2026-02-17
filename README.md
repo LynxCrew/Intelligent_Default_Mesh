@@ -2,6 +2,7 @@
 
 ## Intention
 You can slice your model once and then print it on any build-plate you want without having to reslice it
+Works very well in conjunction with https://github.com/LynxCrew/Intelligent_Beacon_Model
 
 ## Installation
 SSH into you pi and run:
